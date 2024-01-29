@@ -1,0 +1,34 @@
+@media (max-width: 640px) {
+  .card-width {
+    width: 200px;
+  }
+  .main-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 840px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 440px) {
+  .card-width {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-width {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .card-width {
+    width: 400px;
+  }
+}

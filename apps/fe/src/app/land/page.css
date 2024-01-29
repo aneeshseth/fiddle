@@ -1,0 +1,31 @@
+.rectangle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: none;
+}
+
+.circle {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: none;
+  border-radius: 50%;
+}
+
+.full-width {
+  min-width: 100%;
+}
+
+.word-guess {
+  display: flex;
+  margin-left: 30px;
+}
+
+@media (max-width: 440px) {
+  .word-guess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  redis_db:
+    image: "redis:alpine"
+    ports:
+      - 6379:6379
+  api:
+    restart: always
+    ports:
+      - 3004:3004
+    build:
+      context: .
+      dockerfile: Dockerfile

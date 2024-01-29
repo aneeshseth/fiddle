@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import http from "http";
 const app = express();
 const server = http.createServer(app);
@@ -13,6 +13,10 @@ app.use(
     origin: true,
   })
 );
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("server working!");
+});
 
 wss.on("connection", (ws: any) => {
   console.log("user connected!");

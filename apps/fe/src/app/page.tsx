@@ -14,7 +14,7 @@ function page() {
   const [video, setVideo] = useState(false);
   if (video) {
     return (
-      <div className="flex h-screen w-screen flex-col">
+      <div className="flex h-screen w-screen flex-col items-center justify-center">
         <video
           src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
           controls
@@ -22,7 +22,7 @@ function page() {
           className="ml-10 mr-10 mb-10"
         />
         <Button
-          className="w-full mt-5"
+          className="w-full mt-5 ml-10 mr-10"
           onClick={() => {
             setVideo(false);
           }}
@@ -50,14 +50,6 @@ function page() {
         </div>
         <div className="flex gap-3">
           <Button
-            onClick={() => {
-              setVideo(true);
-            }}
-            className="text-xl px-3 py-7 mt-14"
-          >
-            Watch Demo
-          </Button>
-          <Button
             className="text-xl px-3 py-7 mt-14"
             onClick={() => {
               router.push("/roomcreate");
@@ -74,6 +66,14 @@ function page() {
             Join Room
           </Button>
         </div>
+        <Button
+          onClick={() => {
+            setVideo(true);
+          }}
+          className="text-lg px-3 py-5 mt-5"
+        >
+          Watch Demo
+        </Button>
         <blockquote className="mt-6 border-l-2 pl-6 italic">
           90 seconds. 1 drawer. n users. 5 words. maximum guesses wins.
         </blockquote>

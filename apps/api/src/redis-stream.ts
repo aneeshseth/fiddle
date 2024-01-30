@@ -11,19 +11,19 @@ export class RedisStream {
   private reverseSubscriptions: Map<String, { userId: string; ws: any }[]>;
   constructor() {
     this.producer = createClient({
-      url: "redis://redis_db:6379",
+      //url: "redis://redis_db:6379",
     });
     this.subscriber = createClient({
-      url: "redis://redis_db:6379",
+      // url: "redis://redis_db:6379",
     });
     this.generalClient = createClient({
-      url: "redis://redis_db:6379",
+      // url: "redis://redis_db:6379",
     });
     this.drawTracker = createClient({
-      url: "redis://redis_db:6379",
+      // url: "redis://redis_db:6379",
     });
     this.gameTracker = createClient({
-      url: "redis://redis_db:6379",
+      //   url: "redis://redis_db:6379",
     });
     this.producer.connect();
     this.generalClient.connect();

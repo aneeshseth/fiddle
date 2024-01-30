@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./page.css";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -11,6 +11,27 @@ function page() {
   const uuidValue = useRecoilValue(roomIdS);
   const [_uuidVal, setUuidVal] = useRecoilState(roomId);
   const usernameVal = useRecoilValue(usernameState);
+  const [video, setVideo] = useState(false);
+  if (video) {
+    return (
+      <div className="flex h-screen w-screen flex-col">
+        <video
+          src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
+          controls
+          autoPlay
+          className="ml-10 mr-10 mb-10"
+        />
+        <Button
+          className="w-full mt-5"
+          onClick={() => {
+            setVideo(false);
+          }}
+        >
+          Stop Video
+        </Button>
+      </div>
+    );
+  }
   return (
     <div className="bg-[url('https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col bg-auto bg-center w-screen max-w-screen pb-6 min-h-screen drop-in">
       <div className="mt-2 h-[100px]">
@@ -28,6 +49,14 @@ function page() {
           </h1>
         </div>
         <div className="flex gap-3">
+          <Button
+            onClick={() => {
+              setVideo(true);
+            }}
+            className="text-xl px-3 py-7 mt-14"
+          >
+            Watch Demo
+          </Button>
           <Button
             className="text-xl px-3 py-7 mt-14"
             onClick={() => {

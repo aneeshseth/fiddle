@@ -12,7 +12,7 @@ export const useWebSocket = () => {
 export const WebSocketProvider = ({ children }: any) => {
   const [webSocket, setWebSocket] = useRecoilState(webS);
   useEffect(() => {
-    const socket = new WebSocket("wss://fiddleio.aneesh.pro");
+    const socket = new WebSocket("ws://localhost:3004");
     console.log("socket");
     console.log(socket);
     //@ts-ignore

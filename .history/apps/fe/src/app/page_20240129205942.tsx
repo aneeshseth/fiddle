@@ -19,10 +19,10 @@ function page() {
           src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
           controls
           autoPlay
-          className="ml-10 mr-10 mb-5"
+          className="ml-10 mr-10 mb-10"
         />
         <Button
-          className="ml-10 mr-10 bg-white text-black w-48"
+          className="mt-5 ml-10 mr-10 bg-white text-black w-48"
           onClick={() => {
             setVideo(false);
           }}

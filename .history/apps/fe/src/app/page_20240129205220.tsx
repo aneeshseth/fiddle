@@ -15,14 +15,16 @@ function page() {
   if (video) {
     return (
       <div className="flex h-screen w-screen flex-col items-center justify-center">
-        <video
-          src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
-          controls
-          autoPlay
-          className="ml-10 mr-10 mb-5"
-        />
+        <div className="border-2 border-green-500 border-solid">
+          <video
+            src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
+            controls
+            autoPlay
+            className="ml-10 mr-10 mb-10"
+          />
+        </div>
         <Button
-          className="ml-10 mr-10 bg-white text-black w-48"
+          className="w-full mt-5 ml-10 mr-10 bg-white text-black"
           onClick={() => {
             setVideo(false);
           }}

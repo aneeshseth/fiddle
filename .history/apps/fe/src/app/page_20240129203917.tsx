@@ -19,10 +19,10 @@ function page() {
           src="https://myawsbucketaneesh.s3.eu-west-3.amazonaws.com/Screen+Recording+2024-01-29+at+7.20.42+PM.mov"
           controls
           autoPlay
-          className="ml-10 mr-10 mb-5"
+          className="ml-10 mr-10 mb-10"
         />
         <Button
-          className="ml-10 mr-10 bg-white text-black w-48"
+          className="w-full mt-5 ml-10 mr-10 bg-white text-black"
           onClick={() => {
             setVideo(false);
           }}
@@ -74,7 +74,7 @@ function page() {
         >
           Watch Demo
         </Button>
-        <blockquote className="mt-6 border-l-2 pl-6 italic text-center">
+        <blockquote className="mt-6 border-l-2 pl-6 italic">
           90 seconds. 1 drawer. n users. 5 words. maximum guesses wins.
         </blockquote>
       </div>
